@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="zkcharts">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/zkcharts-bin-eval-8.0.4.1/zkcharts-bin-eval-8.0.4.1/dist/lib/zkcharts.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

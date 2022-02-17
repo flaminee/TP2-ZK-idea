@@ -1,0 +1,87 @@
+
+<window  apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('TP2.ArtistViewModel')" title="@load(vm.title)" border="normal">
+	<style src="/widgets/grid/master_detail/style.css" />
+
+	<grid model="@load(vm.listModel)" height="400px" selectedItem="@bind(vm.selectedArtist)">
+
+		<auxhead sclass="category-center">
+			<auxheader colspan="1">
+				<span sclass="z-icon-filter"/>
+				<textbox instant="true" width="100px"
+						 value="@bind(vm.artistFilter.nom)" onChange="@command('changeFilter')" />
+			</auxheader>
+			<auxheader colspan="1">
+				<span sclass="z-icon-filter"/>
+				<textbox instant="true" width="100px"
+						 value="@bind(vm.artistFilter.pays)" onChange="@command('changeFilter')" />
+			</auxheader>
+			<auxheader colspan="1">
+				<span sclass="z-icon-filter"/>
+				<textbox instant="true" width="100px"
+						 value="@bind(vm.artistFilter.ville)" onChange="@command('changeFilter')" />
+			</auxheader>
+			<auxheader colspan="1">
+				<span sclass="z-icon-filter"/>
+				<textbox instant="true" width="100px"
+						 value="@bind(vm.artistFilter.annee)" onChange="@command('changeFilter')" />
+			</auxheader>
+			<auxheader colspan="1">
+				<span sclass="z-icon-filter"/>
+				<textbox instant="true" width="100px"
+						 value="@bind(vm.artistFilter.edition)" onChange="@command('changeFilter')" />
+			</auxheader>
+
+		</auxhead>
+
+
+		<columns menupopup="auto">
+			<column label="Name" sort="auto(nom)"/>
+			<column label="Pays" sort="auto(pays)"/>
+			<column label="Ville" sort="auto(ville)"/>
+			<column label="Année" sort="auto(annee)"/>
+			<column label="Edition" sort="auto(edition)"/>
+		</columns>
+
+
+
+		<template name="model">
+			<row onClick="@command('setSelectedArtist', artist=each)">
+				<label value="@load(each.nom)" />
+				<label value="@load(each.pays)" />
+				<label value="@load(each.ville)" />
+				<label value="@load(each.annee)" />
+				<label value="@load(each.edition)" />
+
+			</row>
+		</template>
+	</grid>
+
+
+	<grid model="@load(vm.selectedArtist.events)" >
+
+		<auxhead sclass="category-center">
+			<auxheader colspan="4">
+				<label>Plus d'information sur l'artiste</label>
+			</auxheader>
+		</auxhead>
+
+		<columns>
+			<column label="Nom de l'évenement" width="30%"/>
+			<column label="date" width="20%"/>
+			<column label="Salle" width="30%"/>
+			<column label="Ville" width="20%"/>
+		</columns>
+
+		<template name="model">
+			<row>
+				<label value="@load(each.nom)" />
+				<label value="@load(each.date)" />
+				<label value="@load(each.salle)" />
+				<label value="@load(each.ville)" />
+			</row>
+		</template>
+	</grid>
+
+
+</window>
