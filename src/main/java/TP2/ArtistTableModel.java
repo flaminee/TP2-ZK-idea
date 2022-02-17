@@ -1,6 +1,5 @@
 package TP2;
 
-import data.BudgetLine;
 import org.zkoss.json.JSONArray;
 import org.zkoss.json.JSONObject;
 import org.zkoss.json.parser.JSONParser;
@@ -27,7 +26,7 @@ public class ArtistTableModel extends AbstractTableModel {
         JSONParser parser = new JSONParser();
 
         try{
-            Object obj = parser.parse(new FileReader("C:\\Users\\Flamine\\Documents\\out.json"));
+            Object obj = parser.parse(new FileReader("out.json"));
             JSONArray jsonArray = (JSONArray) obj;
 
             for(Object object : jsonArray){
@@ -157,10 +156,10 @@ public class ArtistTableModel extends AbstractTableModel {
         Object artistAttribut = null;
         Artist artist = artistData.get(rowIndex);
         switch (columnIndex){
-            case 0 : artistAttribut = artist.getNom(); break;
-            case 1 : artistAttribut = artist.getPays(); break;
-            case 2 : artistAttribut = artist.getVille(); break;
-            case 3 : artistAttribut = artist.getAnnee(); break;
+            case 0 : artistAttribut = artist.getName(); break;
+            case 1 : artistAttribut = artist.getCountry(); break;
+            case 2 : artistAttribut = artist.getCity(); break;
+            case 3 : artistAttribut = artist.getYear(); break;
             default: break;
 
         }
@@ -170,19 +169,19 @@ public class ArtistTableModel extends AbstractTableModel {
     public List<Artist> getFilter(ArtistFilter artistFilter) {
         List<Artist> someArtists = new ArrayList<Artist>();
 
-        String nom = artistFilter.getNom().toLowerCase();
-        String pays = artistFilter.getPays().toLowerCase();
-        String ville = artistFilter.getVille().toLowerCase();
-        String annee = artistFilter.getAnnee().toLowerCase();
+        String nom = artistFilter.getName().toLowerCase();
+        String pays = artistFilter.getCountry().toLowerCase();
+        String ville = artistFilter.getCity().toLowerCase();
+        String annee = artistFilter.getYear().toLowerCase();
         String edition = artistFilter.getEdition().toLowerCase();
 
         for(Iterator<Artist> i = this.artistData.iterator(); i.hasNext();){
             Artist tmp = i.next();
-            if((tmp.getAnnee().toLowerCase().contains(annee)) &&
-            (tmp.getNom().toLowerCase().contains(nom)) &&
+            if((tmp.getYear().toLowerCase().contains(annee)) &&
+            (tmp.getName().toLowerCase().contains(nom)) &&
             (tmp.getEdition().toLowerCase().contains(edition)) &&
-            (tmp.getPays().toLowerCase().contains(pays)) &&
-            (tmp.getVille().toLowerCase().contains(ville))){
+            (tmp.getCountry().toLowerCase().contains(pays)) &&
+            (tmp.getCity().toLowerCase().contains(ville))){
                 someArtists.add(tmp);
             }
         }

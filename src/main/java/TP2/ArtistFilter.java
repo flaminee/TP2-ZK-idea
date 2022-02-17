@@ -3,10 +3,10 @@ package TP2;
 public class ArtistFilter {
 
 
-        private String nom = "";
-        private String pays = "";
-        private String ville = "";
-        private String annee = "";
+        private String name = "";
+        private String country = "";
+        private String city = "";
+        private String year = "";
         private String edition = "";
 
 
@@ -18,36 +18,36 @@ public class ArtistFilter {
             this.edition = edition==null?"":edition.trim();
         }
 
-        public String getNom() {
-            return nom;
+        public String getName() {
+            return name;
         }
 
-        public void setNom(String nom) {
-            this.nom = nom==null?"":nom.trim();
+        public void setName(String name) {
+            this.name = name==null?"":name.trim();
         }
 
-        public String getPays() {
-            return pays;
+        public String getCountry() {
+            return country;
         }
 
-        public void setPays(String pays) {
-            this.pays = pays==null?"":pays.trim();
+        public void setCountry(String country) {
+            this.country = country==null?"":country.trim();
         }
 
-        public String getVille() {
-            return ville;
+        public String getCity() {
+            return city;
         }
 
-        public void setVille(String ville) {
-            this.ville = ville==null?"":ville.trim();
+        public void setCity(String city) {
+            this.city = city==null?"":city.trim();
         }
 
-        public String getAnnee() {
-            return annee;
+        public String getYear() {
+            return year;
         }
 
-        public void setAnnee(String annee) {
-            this.annee = annee==null?"":annee.trim();
+        public void setYear(String year) {
+            this.year = year==null?"":year.trim();
         }
 
 }

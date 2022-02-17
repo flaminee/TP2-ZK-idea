@@ -6,18 +6,18 @@ import org.zkoss.zul.ListModelList;
 import java.util.ArrayList;
 
 public class Artist {
-    private String nom;
-    private String pays;
-    private String ville;
-    private String annee;
+    private String name;
+    private String country;
+    private String city;
+    private String year;
     private String edition;
     private ArrayList<Event> events;
 
-    public Artist(String nom, String pays, String ville, String annee, String edition, ArrayList<Event> event) {
-        this.nom = nom;
-        this.pays = pays;
-        this.ville = ville;
-        this.annee = annee;
+    public Artist(String name, String country, String city, String year, String edition, ArrayList<Event> event) {
+        this.name = name;
+        this.country = country;
+        this.city = city;
+        this.year = year;
         this.edition = edition;
         this.events = event;
     }
@@ -38,35 +38,35 @@ public class Artist {
         this.edition = edition;
     }
 
-    public String getNom() {
-        return nom;
+    public String getName() {
+        return name;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getPays() {
-        return pays;
+    public String getCountry() {
+        return country;
     }
 
-    public void setPays(String pays) {
-        this.pays = pays;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
-    public String getVille() {
-        return ville;
+    public String getCity() {
+        return city;
     }
 
-    public void setVille(String ville) {
-        this.ville = ville;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public String getAnnee() {
-        return annee;
+    public String getYear() {
+        return year;
     }
 
-    public void setAnnee(String annee) {
-        this.annee = annee;
+    public void setYear(String year) {
+        this.year = year;
     }
 }

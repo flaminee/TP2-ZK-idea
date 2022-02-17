@@ -53,6 +53,5 @@ public class ArtistViewModel {
     @NotifyChange({"selectedArtist"})
     public void setSelectedArtist(@BindingParam("artist") Artist artist) {
         selectedArtist = artist;
-        System.out.println(artist.getNom());
     }
 }

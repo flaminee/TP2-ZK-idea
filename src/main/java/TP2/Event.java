@@ -2,24 +2,24 @@ package TP2;
 
 public class Event {
 
-    String nom;
+    String name;
     String date;
-    String salle;
-    String ville;
+    String hall;
+    String place;
 
-    public Event(String nom, String date, String salle, String ville) {
-        this.nom = nom;
+    public Event(String name, String date, String hall, String place) {
+        this.name = name;
         this.date = date;
-        this.salle = salle;
-        this.ville = ville;
+        this.hall = hall;
+        this.place = place;
     }
 
-    public String getNom() {
-        return nom;
+    public String getName() {
+        return name;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setName(String nom) {
+        this.name = nom;
     }
 
     public String getDate() {
@@ -30,19 +30,19 @@ public class Event {
         this.date = date;
     }
 
-    public String getSalle() {
-        return salle;
+    public String getHall() {
+        return hall;
     }
 
-    public void setSalle(String salle) {
-        this.salle = salle;
+    public void setHall(String salle) {
+        this.hall = salle;
     }
 
-    public String getVille() {
-        return ville;
+    public String getPlace() {
+        return place;
     }
 
-    public void setVille(String ville) {
-        this.ville = ville;
+    public void setPlace(String ville) {
+        this.place = ville;
     }
 }
