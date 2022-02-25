@@ -16,7 +16,7 @@ public class ArtistViewModel {
     private List<Artist> currentArtists;
     private Artist selectedArtist;
 
-    private String title = "Le tableau d'artiste";
+    private String title = "Le tableau des artistes";
     public String getTitle() {
         return title;
     }
