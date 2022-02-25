@@ -105,7 +105,7 @@ public class ArtistTableModel extends AbstractTableModel {
                     }else{
                         salle = "Non renseigné";
                     }
-                    if(!eventName.equals("") || !date.equals("") || !salle.equals("") || !eventCity.equals("")){
+                    if(!eventName.equals("Non renseigné") || !date.equals("Non renseigné") || !salle.equals("Non renseigné") || !eventCity.equals("Non renseigné")){
                         events.add(new Event(eventName, date, salle, eventCity));
                     }
 
