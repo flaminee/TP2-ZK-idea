@@ -75,7 +75,7 @@ public class ArtistTableModel extends AbstractTableModel {
                     if(field.containsKey( i + order)){
                         eventName = field.get(i+order).toString();
                     }else{
-                        eventName = "";
+                        eventName = "Non renseigné";
                     }
 
                     if(i == 1 ){ order = "ere_date"; }
@@ -84,7 +84,7 @@ public class ArtistTableModel extends AbstractTableModel {
                     if(field.containsKey( i + order)){
                         date = field.get(i+order).toString();
                     } else{
-                        date = "";
+                        date = "Non renseigné";
                     }
 
                     if(i == 1 ){ order = "ere_ville"; }
@@ -94,7 +94,7 @@ public class ArtistTableModel extends AbstractTableModel {
                     if(field.containsKey( i + order)){
                         eventCity = field.get(i+order).toString();
                     }else{
-                        eventCity = "";
+                        eventCity = "Non renseigné";
                     }
 
                     if(i == 1 ){ order = "ere_salle"; }
@@ -103,7 +103,7 @@ public class ArtistTableModel extends AbstractTableModel {
                     if(field.containsKey( i + order)){
                         salle = field.get(i+order).toString();
                     }else{
-                        salle = "";
+                        salle = "Non renseigné";
                     }
                     if(!eventName.equals("") || !date.equals("") || !salle.equals("") || !eventCity.equals("")){
                         events.add(new Event(eventName, date, salle, eventCity));
